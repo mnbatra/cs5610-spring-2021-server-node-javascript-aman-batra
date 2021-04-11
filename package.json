@@ -1,0 +1,25 @@
+{
+  "name": "wbdv-sp2021-01-amanbatra-server-node",
+  "version": "1.0.0",
+  "description": "Server for Node.js Assignments for CS5610",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnbatra/wbdv-sp2021-01-amanbatra-server-node.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Aman Batra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnbatra/wbdv-sp2021-01-amanbatra-server-node/issues"
+  },
+  "homepage": "https://github.com/mnbatra/wbdv-sp2021-01-amanbatra-server-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
