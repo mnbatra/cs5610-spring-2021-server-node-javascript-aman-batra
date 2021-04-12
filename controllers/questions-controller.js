@@ -11,6 +11,9 @@ module.exports = (app) => {
         res.send(questionService.findQuestionsForQuiz(quizId))
     }
 
+
     app.get("/api/questions", findAllQuestions)
     app.get('/api/quizzes/:qqid/questions', findQuestionsForQuiz)
+
+
 }
