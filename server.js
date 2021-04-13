@@ -11,7 +11,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-require("./controllers/questions-controller")(app)
+require("./controllers/question-controller")(app)
 require("./controllers/quizzes-controller")(app)
 
 app.listen(3001);
