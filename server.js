@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost:27017/whiteboard',
     {useNewUrlParser: true, useUnifiedTopology: true});
 const app = express();
 
-const session =require('express-session')
+const session = require('express-session')
+
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
