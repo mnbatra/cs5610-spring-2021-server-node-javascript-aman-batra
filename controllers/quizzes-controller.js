@@ -1,12 +1,10 @@
-const quizzesService = require("../services/quizzes/quizzes-service")
-
+const quizzesService = require("../services/quizzes-service")
 module.exports = (app) => {
-
     const findAllQuizzes = (req, res) => {
         // const quizzes = quizzesService.findAllQuizzes()
         // res.send(quizzes)
         quizzesService.findAllQuizzes()
-            .then((allQuizzes) => {
+            .then(allQuizzes => {
             res.json(allQuizzes)
         })
     }
