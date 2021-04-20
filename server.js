@@ -8,7 +8,7 @@ const password = process.env.PASSWORD
 const username = process.env.USERNAME
 
 const mongoose = require('mongoose');
-const remoteUri = 'mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.a0ii5.mongodb.net/whiteboard?retryWrites=true&w=majority'
+const remoteUri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.a0ii5.mongodb.net/whiteboard?retryWrites=true&w=majority`;
 try {
     mongoose.connect(remoteUri,
         {useNewUrlParser: true, useUnifiedTopology: true},
@@ -29,7 +29,10 @@ app.use(function (req, res, next) {
 require("./controllers/question-controller")(app)
 require("./controllers/quizzes-controller")(app)
 require('./controllers/quiz-attempts-controller')(app)
-app.listen(3001);
+const port = process.env.PORT || 3001
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
 
 //const demos = require('./controllers/demo-controller');
 //demos(app);
